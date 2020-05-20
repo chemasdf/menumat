@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Menú de operaciones con matrices</title>
+	</head>
+	<body>
+		<center>
+			<script>
+				alert("Te mostraremos un menú con las opciones de las operaciones con matrices")
+				res=(prompt("Opciones:\n1-suma \n2-resta\n3.-Multiplicacion\n4-Division\n5- Transpuesta\n6-Multiplicacion por escalar "))
+				/////////////////////////////////////////////////////////////////////
+				switch(res){
+					case "1":
+					  	alert("Rellena los espacios ésta matriz de 2x2")
+						var matriz=new Array(2);
+						for(i=0;i<matriz.length;i++)
+						{
+							matriz[i]=new Array(2);
+						}
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								matriz[i][j]=parseInt(prompt("Ingresa los numero["+i+"]["+j+"]"));
+							}
+						}
+						document.write("Matriz generada 1")
+						document.write("<br>")
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								document.write(matriz[i][j]+" ")
+							}
+							document.write("<br>")
+						}
+						alert("Ahora rellena los espacios de ésta otra matriz de 2x2")
+						var matriz2=new Array(2);
+						for(i=0;i<matriz2.length;i++)
+						{
+							matriz2[i]=new Array(2);
+						}
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								matriz2[i][j]=parseInt(prompt("Ingresa los numero["+i+"]["+j+"]"));
+							}
+						}
+						document.write("Matriz generada 2")
+						document.write("<br>")
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								document.write(matriz2[i][j]+" ")
+							}
+							document.write("<br>")
+						}
+						document.write("Matriz sumada")
+						document.write("<br>")
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								suma=matriz[i][j]+matriz2[i][j]
+								document.write(suma+" ")
+							}
+							document.write("<br>")
+						}
+					break;
+					case "2":
+						alert("Rellena los espacios ésta matriz de 2x2")
+						var matriz=new Array(2);
+						for(i=0;i<matriz.length;i++)
+						{
+							matriz[i]=new Array(2);
+						}
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								matriz[i][j]=parseInt(prompt("Ingresa los numero["+i+"]["+j+"]"));
+							}
+						}
+						document.write("Matriz creada 1")
+						document.write("<br>")
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								document.write(matriz[i][j]+" ")
+							}
+							document.write("<br>")
+						}
+						alert("Ahora rellena los espacios de ésta otra matriz de 2x2")
+						var matriz2=new Array(2);
+						for(i=0;i<matriz2.length;i++)
+						{
+							matriz2[i]=new Array(2);
+						}
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								matriz2[i][j]=parseInt(prompt("Ingresa los numero["+i+"]["+j+"]"));
+							}
+						}
+						document.write("Matriz generada 2")
+						document.write("<br>")
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								document.write(matriz2[i][j]+" ")
+							}
+							document.write("<br>")
+						}
+						document.write("Matriz restada")
+						document.write("<br>")
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								resta=matriz[i][j]-matriz2[i][j]
+								document.write(resta+" ")
+							}
+							document.write("<br>")
+						}
+   					break;
+   					case "3":
+   						alert("Tienes que rellenar las posiciones de ésta matriz")
+						alert("Y posteriormente te mostraremos la multiplicación de ambas matrices")
+						var mat=new Array(2);
+						for(i=0;i<mat.length;i++)
+						{
+							mat[i]=new Array(2);	
+						}
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								mat[i][j]=parseInt(prompt("Ingresa los numero["+i+"]["+j+"]"));
+							}
+						}
+						document.write("Matriz 1")
+						document.write("<br>")
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								document.write(mat[i][j]+" ")
+							}
+							document.write("<br>")
+						}
+						alert("Rellena las posiciones de la segunda matriz")
+						var mat2=new Array(2);
+						for(i=0;i<mat2.length;i++)
+						{
+							mat2[i]=new Array(2);
+						}
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								mat2[i][j]=parseInt(prompt("Ingresa los números de la posición["+i+"]["+j+"]"));
+							}
+						}
+						document.write("Matriz 2")
+						document.write("<br>")
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								document.write(mat2[i][j]+" ")
+							}
+							document.write("<br>")
+						}
+						document.write("Matriz multiplicada")
+						document.write("<br>")
+						var matmul=new Array(2);
+						for(i=0;i<matmul.length;i++)
+						{
+							matmul[i]=new Array(2);
+						}
+						for(i=0;i<matmul.length;i++)
+						{
+							for(j=0;j<matmul.length;j++)
+							{
+								matmul[i][j]=0;
+								for(k=0;k<matmul.length;k++)
+								{
+									matmul[i][j]=(matmul[i][j]+(mat[i][k]*mat2[k][j]));
+								}
+							}
+						}
+						for(i=0;i<matmul.length;i++)
+						{
+							for (j=0;j<matmul.length;j++)
+							{
+								document.write(matmul[i][j]+" ")
+							}
+							document.write("<br>")
+						}
+   					break;
+   					case "4":
+   						alert("Te mostraremos la división de 2 matrices")
+						var matA= new Array(2);
+						for(i=0;i<matA.length;i++)
+						{
+							matA[i]= new Array(2);
+						}
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								matA[i][j]=parseInt(prompt("Introduce los números de la posición:["+i+"]["+j+"]"));
+							}
+						}	
+						document.write("Matriz 1")
+						document.write("<br>")
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								document.write(matA[i][j]+" ")
+							}
+							document.write("<br>")
+						}
+						alert("Matriz 2")
+						var matB= new Array(2);
+						for(i=0;i<matB.length;i++)
+						{
+							matB[i]= new Array(2);
+						}
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								matB[i][j]=parseInt(prompt("Introduce los números de la posición:["+i+"]["+j+"]"));
+							}
+						}	
+						document.write("Matriz 2")
+						document.write("<br>")
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								document.write(matB[i][j]+" ")
+							}
+							document.write("<br>")
+						}	
+						determinante=0;
+						determinante=(matB[0][0]*matB[1][1])-(matB[0][1]*matB[1][0])
+						document.write("determinante:")
+						document.write("<br>")
+						document.write(determinante)	
+						document.write("<br>")
+						document.write("Segunda matriz transpuesta")
+						document.write("<br>")
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								mattrans=0;
+								mattrans=matB[j][i]
+								document.write(mattrans+" ")
+							}
+							document.write("<br>")
+						}
+						document.write("Adjunta de la segunda matriz transpuesta")
+						document.write("<br>")
+						var matad= new Array(2);
+						for(i=0;i<matad.length;i++)
+						{
+							matad[i]=new Array(2);
+						}
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								matad[0][0]=matB[1][1];
+								matad[1][1]=matB[0][0];
+								matad[0][1]=matB[0][1];
+								matad[1][0]=matB[1][0];
+								matad[0][1]=(matad[0][1]*-1)
+								matad[1][0]=(matad[1][0]*-1)
+							}
+						}
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								document.write(matad[i][j]+" ")
+							}
+							document.write("<br>")
+						}
+						//////////////////////////////////////
+						document.write("Matriz B inversa")
+						document.write("<br>")
+						var matbin= new Array(2);
+						for(i=0;i<matbin.length;i++)
+						{
+							matbin[i]=new Array(2);
+						}
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								matbin[i][j]=matad[i][j]/determinante;
+							}
+						}
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								document.write(matbin[i][j]+" ")
+							}
+							document.write("<br>")
+						}
+						document.write("Matrices Divididas")
+						document.write("<br>")
+						var matdiv=new Array(2);
+						for(i=0;i<matdiv.length;i++)
+						{
+							matdiv[i]=new Array(2);
+						}
+						for(i=0;i<matdiv.length;i++)
+						{
+							for(j=0;j<matdiv.length;j++)
+							{
+								matdiv[i][j]=0;
+								for(k=0;k<matdiv.length;k++)
+								{
+									matdiv[i][j]=(matdiv[i][j]+(matA[i][k]*matbin[k][j]));
+								}
+							}
+						}
+						for(i=0;i<matdiv.length;i++)
+						{
+							for (j=0;j<matdiv.length;j++)
+							{
+								document.write(matdiv[i][j]+" ")
+							}
+							document.write("<br>")
+						}
+   					break;
+   					case "5":
+   						alert("Tienes que rellenar las posiciones de ésta matriz")
+   						var matriz=new Array(2);
+						for(i=0;i<matriz.length;i++)
+						{
+							matriz[i]=new Array(2);
+						}
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								matriz[i][j]=parseInt(prompt("Ingresa los numero["+i+"]["+j+"]"));
+							}
+						}
+						document.write("Matriz generada")
+						document.write("<br>")
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								document.write(matriz[i][j]+" ")
+							}
+							document.write("<br>")
+						}
+						document.write("Matriz Transpuesta")
+						document.write("<br>")
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								document.write(matriz[j][i]+" ")
+							}
+							document.write("<br>")
+						}
+		   			break;
+   					case "6":
+   						alert("te mostraremos una matriz multiplicada por un escalar")
+						escalar=0;
+						var mat= new Array(2);
+						for(i=0;i<mat.length;i++)
+						{
+							mat[i]=new Array(2);
+						}
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								mat[i][j]=parseInt(prompt("Introduce los números de las posiciones:["+i+"]["+j+"]"));
+							}
+						}
+						alert("Tu matriz está generada")
+						escalar=parseInt(prompt("Introduce el escalar que desees"));
+						document.write("Matriz generada")
+						document.write("<br>")
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								document.write(mat[i][j]+" ")
+							}
+							document.write("<br>")
+						}
+						document.write("El escalar")
+						document.write("<br>")
+						document.write(escalar)
+						document.write("<br>")
+						document.write("Matriz multiplicada por el escalar")
+						document.write("<br>")
+						for(i=0;i<2;i++)
+						{
+							for(j=0;j<2;j++)
+							{
+								mul=mat[i][j]*escalar;
+								document.write(mul+" ")
+							}
+							document.write("<br>")	
+						}
+   					break;
+				}	
+			</script>
+		</center>
+	</body>
+</html>
